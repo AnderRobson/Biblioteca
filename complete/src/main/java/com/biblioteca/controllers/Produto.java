@@ -12,7 +12,7 @@ public class Produto {
     Usuario usuario = new Usuario();
     Livro[] livros = new Livro().getLivros();
 
-    @GetMapping("/home")
+    @GetMapping("/")
     public String home(Model model) {
         Livro[] banner = new Livro[4];
 
