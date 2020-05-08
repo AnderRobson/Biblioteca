@@ -111,7 +111,7 @@
                         <div class="col p-4 d-flex flex-column position-static">
                             <strong class="d-inline-block mb-2 text-primary" th:text="'Autor : ' + ${livro.getAutor().getPessoa().getNome()}"></strong>
                             <h3 class="mb-0" th:text="${livro.getTitulo()}"></h3>
-                            <div class="mb-1 text-muted" th:text="${livro.getDescricao()}"></div>
+                            <div class="mb-1 text-muted" th:text="${livro.getDescricao().substring(0, 100) + ' ...'}"></div>
                             <a th:href="@{'detalhe?idLivro=' + ${livro.getId()}}" class="stretched-link">Continue reading</a>
                         </div>
                         <div class="col-auto d-none d-lg-block">
